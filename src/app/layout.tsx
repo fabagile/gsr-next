@@ -25,7 +25,8 @@ export default function RootLayout ({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
+  const accessGranted  =true
+  return accessGranted ?(
     <html lang='fr'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -34,5 +35,5 @@ export default function RootLayout ({
         {children}
       </body>
     </html>
-  )
+  ) : (<a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">Connexion</a>)
 }
