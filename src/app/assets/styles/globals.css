@@ -5,12 +5,13 @@
   --foreground: #171717;
 }
 
+/* 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,4 +24,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.grid-custom {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: minmax(auto, 100px) 1fr;
 }

@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
-import Navbar from './components/layout/nav/Navbar'
+import './assets/styles/globals.css'
+import Header from './assets/components/layout/Header'
+import Footer from './assets/components/layout/Footer'
+import { useState } from 'react'
+import Display from './assets/components/Display'
+// import Footer from './assets/components/layout/Footer'
+// import Navbar from './assets/components/layout/nav/Navbar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,18 +28,17 @@ export default function RootLayout ({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const accessGranted  =true
-  return accessGranted ?(
-    <html lang='fr'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        <main className="lg:w-5xl mx-auto my-5">
-        {children}
+  const accessGranted = true
 
-        </main>
-      </body>
-    </html>
-  ) : (<a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">Connexion</a>)
+  return accessGranted
+    ? (
+      <html lang='fr'>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        ><Display>{children}</Display>
+
+        </body>
+      </html>
+      )
+    : (<a href='https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1'>Connexion</a>)
 }

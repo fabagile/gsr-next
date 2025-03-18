@@ -1,13 +1,13 @@
 import React from 'react'
-import Title from '../components/typo/Title'
+import Title from '../assets/components/typo/Title'
 
 const Bookings = () => {
   return (
-   <Title>
-     Réservations
+    <Title>
+      Réservations
 
-   </Title>
-    
+    </Title>
+
   )
 }
 

@@ -1,427 +1,99 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import React from 'react'
-import Title from '../components/typo/Title'
-// import { DiVim } from 'react-icons/di'
+import Title from '../assets/components/typo/Title'
+import { FaRegEye } from 'react-icons/fa'
+import { BsThreeDotsVertical } from 'react-icons/bs'
+
+import materialData from '@/app/assets/data/material'
+const ButtonGroup = ({ id }: { id: string }) => {
+  const router = useRouter()
+  const updateItem = () => alert(`${id} va être modifié`)
+  // const readItem=()=> {alert(`Je vais vous montrer ${id}`)}
+  const deleteItem = () => alert(`${id} va être supprimé`)
+  return (
+    <div className='inline-flex items-center rounded-md shadow-sm'>
+      <button
+        title='Modifier' onClick={() => updateItem()} className='text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 rounded-l-lg font-medium px-4 py-2 inline-flex space-x-1 items-center'
+      >
+        <span><svg
+          xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+          stroke='currentColor' className='w-6 h-6'
+              >
+          <path
+            strokeLinecap='round' strokeLinejoin='round'
+            d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10'
+          />
+        </svg>
+        </span>
+        {/* <span className="hidden md:inline-block">Edit</span> */}
+      </button>
+      <button
+        title='Voir' onClick={() => router.push(`/material/${id}`)} className='text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border-y border-slate-200 font-medium px-4 py-2 inline-flex space-x-1 items-center'
+      >
+        <span>
+          <svg
+            xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+            stroke='currentColor' className='w-6 h-6'
+          >
+            <path
+              stroke-linecap='round' stroke-linejoin='round'
+              d='M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z'
+            />
+            <path strokeLinecap='round' strokeLinejoin='round' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+          </svg>
+        </span>
+        {/* <span className="hidden md:inline-block">View</span> */}
+      </button>
+      <button
+        title='Supprimer' onClick={() => deleteItem()} className='text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 rounded-r-lg font-medium px-4 py-2 inline-flex space-x-1 items-center'
+      >
+        <span>
+          <svg
+            xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+            stroke='currentColor' className='w-6 h-6'
+          >
+            <path
+              strokeLinecap='round' strokeLinejoin='round'
+              d='M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0'
+            />
+          </svg>
+        </span>
+        {/* <span className="hidden md:inline-block">Delete</span> */}
+      </button>
+    </div>
+  )
+}
 
 const Material = () => {
+  const head = ['Code-Barres', 'N° de Série', 'Modèle', 'Salle']
   const sample = [
-    { code: "", serial: "BBGF00843", model: "Canon imagePROGRAF TX-3200", room: "FB020" },
-    { code: "00000109", serial: "E000111208005", model: "Horoquartz LB5 RESEAU", room: "FB010" },
-    { code: "00001294", serial: "3CQ049BL9R", model: "ECRAN LCD 19''", room: "FB024" },
+    // { code: "Code-Barres", serial: "N° de Série", model: "Modèle", room: "Salle" },
+    { code: '', serial: 'BBGF00843', model: 'Canon imagePROGRAF TX-3200', room: 'FB020' },
+    { code: '00000109', serial: 'E000111208005', model: 'Horoquartz LB5 RESEAU', room: 'FB010' },
+    { code: '00001294', serial: '3CQ049BL9R', model: "ECRAN LCD 19''", room: 'FB024' }
 
     //          BBGF00843	Canon imagePROGRAF TX-3200	FB020
     // 00000109	E000111208005	Horoquartz LB5 RESEAU	FB010
     // 00001294	3CQ049BL9R	ECRAN LCD 19''	FB024
   ]
-  return (<>
-    <section className='text-center'>
-      <Title  >Matériel</Title>
-      {sample.map((item, i) => <div className='grid grid-cols-4' key={i}>{Object.values(item).map((val, v) => <div key={v}>{val}</div>)}</div>)}
-      {/* <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 p-3 md:p-4 xl:p-5 dark:bg-gray-900">
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/simple-search-bar">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/simple-search-bar/thumb_u.min.webp"
-                    alt="Simple Search Bar" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/simple-search-bar">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Simple Search Bar
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Minimalist design</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/responsive-navbar-with-dark-mode-support">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/responsive-navbar-with-dark-mode-support/canvas.min.webp"
-                    alt="Responsive navbar with dark mode support" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/responsive-navbar-with-dark-mode-support">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Responsive navbar with dark mode support
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Sidebar on small screen devices</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/profile-form">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/profile-form/thumb_u.min.webp"
-                    alt="Profile Form" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/profile-form">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Profile Form
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Profile form for taking user inputs
-                </p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/heading-with-left-border">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/heading-with-left-border/thumb_u.min.webp"
-                    alt="Heading with left border" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/heading-with-left-border">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Heading with left border
-                    </h5>
-                </a>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/full-width-header-with-gradient">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/full-width-header-with-gradient/thumb_u.min.webp"
-                    alt="Full width header with gradient." loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/full-width-header-with-gradient">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Full width header with gradient.
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Header component for showing Info.</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/tagbutton-cloud">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/tagbutton-cloud/thumb_u.min.webp"
-                    alt="Tag/Button Cloud" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/tagbutton-cloud">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Tag/Button Cloud
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Responsive tag cloud. Created with
-                    FlexBox</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/button-group">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/button-group/thumb_u.min.webp"
-                    alt="Button Group" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/button-group">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Button Group
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Add class to clicked Element using
-                    JavaScript</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/404-error-page">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/404-error-page/thumb_u.min.webp"
-                    alt="404 Error Page" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/404-error-page">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        404 Error Page
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Minimal 404 for your project</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/hero-header-with-search-button">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/hero-header-with-search-button/thumb_u.min.webp"
-                    alt="Hero Header with search button" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/hero-header-with-search-button">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Hero Header with search button
-                    </h5>
-                </a>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="p-2 flex justify-center">
-            <a href="https://tailwindflex.com/team-tailwindflex/alert-mono-color">
-                <img class="rounded-lg"
-                    src="https://tailwindflex.com/public/images/thumbnails/alert-mono-color/thumb_u.min.webp"
-                    alt="Alert mono color" loading="lazy">
-            </a>
-        </div>
-        <div class="px-4 pb-3">
-            <div>
-                <a href="https://tailwindflex.com/team-tailwindflex/alert-mono-color">
-                    <h5
-                        class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
-                        Alert mono color
-                    </h5>
-                </a>
-                <p class="text-gray-600 dark:text-gray-400 text-sm break-all">Dismissible alert card.</p>
-            </div>
-            <div class="mt-2 flex justify-between">
-                <div class="flex gap-3 py-2">
-                    <a href="/u/team-tailwindflex">
-                        <img src="https://tailwindflex.com/public/images/profile/1.png"
-                            class="object-cover w-12 h-12 rounded-full" alt="team-tailwindflex" loading="lazy">
-                    </a>
-                    <p class="text-gray-600 dark:text-gray-300 hover:text-violet-800 ">
-                        <a href="/u/team-tailwindflex" class="text-sm">
-                            <small>Author:</small> <br>
-                            TailwindFlex
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center mt-2.5">
-                    <span class="text-sm dark:text-gray-400">Ratings</span>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                        5.0
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> */}
+  return (
+    <>
+      <section className='text-center'>
+        <Title>Matériel</Title>
+        <table className='table-auto border-collapse border-separate border-spacing-4 mx-auto'>
+          <thead><tr>{head.map(val => <th key={val}>{val}</th>)}</tr></thead>
+          <tbody>
+            {materialData.map((item, i) => <tr key={i} className={i % 2 == 1 ? 'bg-slate-100' : ''}>{Object.values(item).map((val, v) => <td key={v}>{val}</td>)}<td><ButtonGroup id={item.serial} /></td></tr>)}
 
-    </section>
-  </>
+          </tbody>
+
+          {/* {sample.map((item, i) => <div className='grid grid-cols-5 auto-cols-min' key={i}>{Object.values(item).map((val, v) => <div className={i==0?"font-semibold uppercase text-lg":"font-light"} key={v}>{val.length?val:"/"}</div>)}<div role="button"><FaRegEye /></div></div>)} */}
+        </table>
+
+      </section>
+    </>
   )
 }
 
