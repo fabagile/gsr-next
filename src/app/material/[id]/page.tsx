@@ -19,21 +19,20 @@ const MaterialItem = () => {
     // const values = Object.values(item?).map()
     // const router = useRouter()
     // const {id}=request.
-    return (<section className=''>
+    return (<main className='w-90 mx-auto'>
         <Title>Fiche Matériel</Title>
         <Subtitle>{id}</Subtitle>
-        {/* <div>{JSON.stringify(item,null, 2)}</div> */}
-        <div className='mx-auto'>
-        {values.map((value, i) => (
-            <div className='grid-custom'>
-                <div className="font-semibold">{titles[i]}</div>
-                <div className="">{value?value:"/"}</div>
 
-            </div>
-        ))}
+        <div className='grid-custom'>
+            {values.map((value, i) => (<>
+                <div className="font-semibold">{`${titles[i]}:`}</div>
+                <div className="w-auto">{value ? value : "/"}</div>
+            </>
+
+            ))}
         </div>
 
-    </section>
+    </main>
     )
 }
 

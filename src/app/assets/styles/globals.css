@@ -32,7 +32,15 @@ h2 {
 }
 
 .grid-custom {
+  /* grid-area: auto; */
+  width: max-content;
+  margin: auto;
+  /* place-items: center; */
   display: grid;
-  gap: 1em;
-  grid-template-columns: minmax(auto, 100px) 1fr;
+  /* gap: 1em; */
+  grid-template-columns: minmax(auto, 125px) minmax(200px,auto);
+  grid-auto-flow:row;
 }
+/* .grid-custom> * {
+  text-align: left;
+} */
