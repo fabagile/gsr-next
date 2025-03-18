@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className='bg-sky-500 text-white mx-auto flex items-center justify-between p-2 lg:px-3' aria-label='Global'>
       <Brand href='/'>
         <Image width='64' height='64' src='/favicon.ico' alt='' />
-        <span className=''>Coopérative U</span>
+        <span className='text-4xl text-shadow-lg'>Coopérative U</span>
         {/* <span className="sr-only">Coopérative U</span> */}
       </Brand>
       <Collapse />

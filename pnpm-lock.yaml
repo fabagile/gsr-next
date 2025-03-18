@@ -11,6 +11,9 @@ importers:
       '@canvasjs/charts':
         specifier: ^3.12.5
         version: 3.12.5
+      '@canvasjs/react-charts':
+        specifier: ^1.0.2
+        version: 1.0.2(@canvasjs/charts@3.12.5)(react@19.0.0)
       next:
         specifier: 15.2.2
         version: 15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -51,6 +54,12 @@ packages:
 
   '@canvasjs/charts@3.12.5':
     resolution: {integrity: sha512-HgMkCI7VnCL6fGQTaxC4+uhLq81u3ecDIPt8xm5e2G9sM8jQVJbwn+tP041OuZM2gc/G1q+Rzns8Us8wqOj8ZA==}
+
+  '@canvasjs/react-charts@1.0.2':
+    resolution: {integrity: sha512-PZgJlDbGdMF4AN/KvrvGY9X50EByJMZ7MHfQB/U0aky9Onn9mt0CpsvwudBsBe+DofaV3SHR4SHn/Wfo/pubDw==}
+    peerDependencies:
+      '@canvasjs/charts': ^3.7.5
+      react: '>=16.0.0'
 
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
@@ -523,6 +532,11 @@ snapshots:
   '@alloc/quick-lru@5.2.0': {}
 
   '@canvasjs/charts@3.12.5': {}
+
+  '@canvasjs/react-charts@1.0.2(@canvasjs/charts@3.12.5)(react@19.0.0)':
+    dependencies:
+      '@canvasjs/charts': 3.12.5
+      react: 19.0.0
 
   '@emnapi/runtime@1.3.1':
     dependencies:

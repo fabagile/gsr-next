@@ -32,7 +32,10 @@ export default function RootLayout ({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <main className="lg:w-5xl mx-auto my-5">
         {children}
+
+        </main>
       </body>
     </html>
   ) : (<a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">Connexion</a>)
