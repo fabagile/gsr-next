@@ -3,15 +3,21 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Title from '../assets/components/typo/Title'
-import { FaRegEye } from 'react-icons/fa'
+import { FaEye, FaRegEye } from 'react-icons/fa'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 
 import materialData from '@/app/assets/data/material'
+import { FaRegPenToSquare, FaRegTrashCan } from 'react-icons/fa6'
 const ButtonGroup = ({ id }: { id: string }) => {
   const router = useRouter()
   const updateItem = () => alert(`${id} va être modifié`)
-  // const readItem=()=> {alert(`Je vais vous montrer ${id}`)}
+  const readItem=() => router.push(`/material/${id}`)
   const deleteItem = () => alert(`${id} va être supprimé`)
+  const buttons = [
+    {title:"Modifier", action:updateItem,component:<FaRegPenToSquare />},
+    {title:"Voir", action:readItem,component:<FaEye />},
+    {title:"Effacer", action:deleteItem,component:<FaRegTrashCan/>},
+  ]
   return (
     <div className='inline-flex items-center rounded-md shadow-sm'>
       <button
