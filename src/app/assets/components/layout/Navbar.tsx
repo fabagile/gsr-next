@@ -32,7 +32,7 @@ const Navbar = () => {
 
       <div className='hidden lg:flex lg:gap-x-12 lg:justify-end'>
 
-        <NavLink href='/'>Accueil</NavLink>
+        {/* <NavLink href='/'>Accueil</NavLink> */}
         <NavLink href='/material'>Matériel</NavLink>
         <NavLink href='/bookings'>Réservations</NavLink>
         {/* <NavLink href='/help'>Aide</NavLink> */}

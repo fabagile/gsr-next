@@ -1,4 +1,11 @@
-const sample = [
+export type ItemType = {
+  code:string
+  model:string
+  serial:string
+  room:string
+  
+}
+const sample:ItemType[] = [
   // { code: "Code-Barres", serial: "N° de Série", model: "Modèle", room: "Salle" },
   { code: '', serial: 'BBGF00843', model: 'Canon imagePROGRAF TX-3200', room: 'FB020' },
   { code: '00000109', serial: 'E000111208005', model: 'Horoquartz LB5 RESEAU', room: 'FB010' },
