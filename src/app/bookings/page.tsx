@@ -1,14 +1,8 @@
-import React from 'react'
-import Title from '../assets/components/typo/Title'
+import React from "react";
+import Title from "../assets/components/typo/Title";
 
 const Bookings = () => {
-  return (
-    <Title>
-      Réservations
+  return <Title>Réservations</Title>;
+};
 
-    </Title>
-
-  )
-}
-
-export default Bookings
+export default Bookings;

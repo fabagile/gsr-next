@@ -1,19 +1,18 @@
-'use client'
-import Image from 'next/image'
-import { ReactNode } from 'react'
-import Navbar from './Navbar'
-import Brand from './nav/Brand'
-import NavLink from './nav/NavLink'
-import Collapse from './nav/Collapse'
+"use client";
+import Image from "next/image";
+import { ReactNode } from "react";
+import Navbar from "./Navbar";
+import Brand from "./nav/Brand";
+import NavLink from "./nav/NavLink";
+import Collapse from "./nav/Collapse";
 // import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-slate-500'>
+    <header className="bg-slate-500">
       <Navbar />
-
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
