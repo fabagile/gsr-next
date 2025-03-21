@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import React from "react";
-import { useStore } from "@/app/assets/store/useStore";
+import { useStore } from "@/lib/store/useStore";
 
 const Footer = () => {
   const color = useStore((s) => s.color);

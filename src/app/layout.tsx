@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./assets/styles/globals.css";
-import Header from "./assets/components/layout/Header";
-import Footer from "./assets/components/layout/Footer";
-import { useState } from "react";
-import Display from "./assets/components/Display";
-// import Footer from './assets/components/layout/Footer'
-// import Navbar from './assets/components/layout/nav/Navbar'
+
+import Header from "@/lib/components/layout/Header";
+import Footer from "@/lib/components/layout/Footer";
+
+import "@/lib/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,19 +26,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const accessGranted = true;
-
-  return accessGranted ? (
+  return (
     <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Display>{children}</Display>
+        <Header />
+        <main className="lg:w-5xl mx-auto my-5">{children}</main>
+        <Footer />
       </body>
     </html>
-  ) : (
-    <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">
-      Connexion
-    </a>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Title from "./assets/components/typo/Title";
+
+import Title from "@/lib/components/typo/Title";
 
 export default function Home() {
   return (

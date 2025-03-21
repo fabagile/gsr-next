@@ -2,13 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
-import Title from "../assets/components/typo/Title";
 import { FaEye, FaRegEye } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-import { ItemType } from "@/app/assets/data/material";
+import { ItemType } from "@/lib/data/material";
 import { FaRegPenToSquare, FaRegTrashCan } from "react-icons/fa6";
-import useMaterialStore from "../assets/store/useMaterialStore";
+import Title from "@/lib/components/typo/Title";
+import useMaterialStore from "@/lib/store/useMaterialStore";
 
 const ButtonGroup = ({ id }: { id: string }) => {
   const router = useRouter();

@@ -4,14 +4,14 @@ import { request } from "http";
 // import { useRouter } from 'next/router'
 import { useParams, useRouter } from "next/navigation";
 import React from "react";
-import { ItemType } from "@/app/assets/data/material";
-import Title from "@/app/assets/components/typo/Title";
-import Subtitle from "@/app/assets/components/typo/Subtitle";
-import useMaterialStore from "@/app/assets/store/useMaterialStore";
+import { ItemType } from "@/lib/data/material";
+import Title from "@/lib/components/typo/Title";
+import Subtitle from "@/lib/components/typo/Subtitle";
+import useMaterialStore from "@/lib/store/useMaterialStore";
 import Link from "next/link";
 import { FaRegPenToSquare, FaRegTrashCan } from "react-icons/fa6";
 import { rootName } from "../root";
-import Button from "@/app/assets/components/ui/button";
+import Button from "@/lib/components/ui/Button";
 import { FaEye } from "react-icons/fa";
 
 const MaterialItem = () => {

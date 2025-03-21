@@ -1,4 +1,4 @@
-import data from '../material.json'
+import data from '@/lib/data/material.json'
 
 export async function GET(req, {params}) {
     const serial = params.serial

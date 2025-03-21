@@ -1,55 +1,19 @@
 // 'use client'
 
 import React from "react";
-import Title from "../assets/components/typo/Title";
+import Title from "@/lib/components/typo/Title";
 
 import { rootName } from "./root";
 import { redirect } from "next/navigation";
 import { FaRegPenToSquare, FaRegTrashCan } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
-import Button from "../assets/components/ui/button";
+import Button from "@/lib/components/ui/Button";
 import Link from "next/link";
-
-// const ButtonGroup = ({ id }) => {
-// //   const router = useRouter();
-//   const updateItem = () => redirect(`/material/${id}/update`);
-//   const readItem = () => redirect(`/material/${id}`);
-//   const deleteItem = () => alert(`${id} va être supprimé`);
-//   const buttons = [
-//     { title: "Voir", color: "sky", action: readItem, component: <FaEye /> },
-//     {
-//       title: "Modifier",
-//       color: "amber",
-//       action: updateItem,
-//       component: <FaRegPenToSquare />,
-//     },
-//     {
-//       title: "Effacer",
-//       color: "red",
-//       action: deleteItem,
-//       component: <FaRegTrashCan />,
-//     },
-//   ];
-//   return (
-//     <div className="inline-flex items-center ml-2">
-//       {buttons.map(({ title, color, action, component }) => (
-//         <button
-//           title={title}
-//           onClick={action}
-//           key={title}
-//           className={`text-slate-800 hover:text-blue-600 text-sm bg-${color} hover:bg-${color}-100 rounded-sm font-medium px-3 py-2 space-x-1`}
-//         >
-//           {component}
-//         </button>
-//       ))}
-//     </div>
-//   );
-// };
 
 async function Test() {
   const head = ["Code-Barres", "N° de Série", "Modèle", "Salle", "Actions"];
   const getMaterial = async () => {
-    const res = await fetch("http://localhost:4000/api/material/");
+    const res = await fetch("http://localhost:3000/api/material/");
     return res.json();
   };
   const data = await getMaterial();

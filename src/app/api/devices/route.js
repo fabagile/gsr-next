@@ -1,4 +1,4 @@
-import data from './devices.json'
+import data from '@/lib/data/devices.json'
 
 export async function GET() {
     
