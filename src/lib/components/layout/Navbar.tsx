@@ -12,6 +12,7 @@ import Brand from "./nav/Brand";
 import Collapse from "./nav/Collapse";
 import { useStore } from "../../store/useStore";
 
+
 const Navbar = () => {
   interface LinkType {
     href: string;
@@ -39,7 +40,7 @@ const Navbar = () => {
       {/* {children} */}
 
       <div className="hidden lg:flex lg:gap-x-12 lg:justify-end">
-        {/* <NavLink href='/'>Accueil</NavLink> */}
+        <NavLink href='/'>Accueil</NavLink>
         <NavLink href="/materiel">Matériel</NavLink>
         <NavLink href="/bookings">Réservations</NavLink>
         {/* <NavLink href='/help'>Aide</NavLink> */}

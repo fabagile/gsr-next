@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import Header from "@/lib/components/layout/Header";
@@ -16,11 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Gestion de la salle de recette",
-  description:
-    "Gestion matérielle et logicielle des équipements de la salle de recette",
-};
+// export const metadata: Metadata = {
+//   title: "Gestion de la salle de recette",
+//   description: "Gestion matérielle et logicielle des équipements de la salle de recette",
+// };
 
 export default function RootLayout({
   children,
@@ -32,11 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div id="app">
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </div>
+        {/* <Header /> */}
+        <main className="lg:w-5xl mx-auto my-5">{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -11,6 +11,8 @@
   "dependencies": {
     "@canvasjs/charts": "^3.12.5",
     "@canvasjs/react-charts": "^1.0.2",
+    "biome": "^0.3.3",
+    "json-server": "0.17.4",
     "next": "15.2.2",
     "postcss": "^8.5.3",
     "react": "^19.0.0",

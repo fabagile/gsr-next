@@ -1,0 +1,443 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "bs": "harness real-time e-markets"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net",
+      "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "suite": "Suite 847",
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157",
+        "geo": {
+          "lat": "-68.6102",
+          "lng": "-47.0653"
+        }
+      },
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info",
+      "company": {
+        "name": "Romaguera-Jacobson",
+        "catchPhrase": "Face to face bifurcated interface",
+        "bs": "e-enable strategic applications"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "suite": "Apt. 692",
+        "city": "South Elvis",
+        "zipcode": "53919-4257",
+        "geo": {
+          "lat": "29.4572",
+          "lng": "-164.2990"
+        }
+      },
+      "phone": "493-170-9623 x156",
+      "website": "kale.biz",
+      "company": {
+        "name": "Robel-Corkery",
+        "catchPhrase": "Multi-tiered zero tolerance productivity",
+        "bs": "transition cutting-edge web services"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "suite": "Suite 351",
+        "city": "Roscoeview",
+        "zipcode": "33263",
+        "geo": {
+          "lat": "-31.8129",
+          "lng": "62.5342"
+        }
+      },
+      "phone": "(254)954-1289",
+      "website": "demarco.info",
+      "company": {
+        "name": "Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "address": {
+        "street": "Norberto Crossing",
+        "suite": "Apt. 950",
+        "city": "South Christy",
+        "zipcode": "23505-1337",
+        "geo": {
+          "lat": "-71.4197",
+          "lng": "71.7478"
+        }
+      },
+      "phone": "1-477-935-8478 x6430",
+      "website": "ola.org",
+      "company": {
+        "name": "Considine-Lockman",
+        "catchPhrase": "Synchronised bottom-line interface",
+        "bs": "e-enable innovative applications"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "address": {
+        "street": "Rex Trail",
+        "suite": "Suite 280",
+        "city": "Howemouth",
+        "zipcode": "58804-1099",
+        "geo": {
+          "lat": "24.8918",
+          "lng": "21.8984"
+        }
+      },
+      "phone": "210.067.6132",
+      "website": "elvis.io",
+      "company": {
+        "name": "Johns Group",
+        "catchPhrase": "Configurable multimedia task-force",
+        "bs": "generate enterprise e-tailers"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "street": "Ellsworth Summit",
+        "suite": "Suite 729",
+        "city": "Aliyaview",
+        "zipcode": "45169",
+        "geo": {
+          "lat": "-14.3990",
+          "lng": "-120.7677"
+        }
+      },
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com",
+      "company": {
+        "name": "Abernathy Group",
+        "catchPhrase": "Implemented secondary concept",
+        "bs": "e-enable extensible e-tailers"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "street": "Dayna Park",
+        "suite": "Suite 449",
+        "city": "Bartholomebury",
+        "zipcode": "76495-3109",
+        "geo": {
+          "lat": "24.6463",
+          "lng": "-168.8889"
+        }
+      },
+      "phone": "(775)976-6794 x41206",
+      "website": "conrad.com",
+      "company": {
+        "name": "Yost and Sons",
+        "catchPhrase": "Switchable contextually-based project",
+        "bs": "aggregate real-time technologies"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "suite": "Suite 198",
+        "city": "Lebsackbury",
+        "zipcode": "31428-2261",
+        "geo": {
+          "lat": "-38.2386",
+          "lng": "57.2232"
+        }
+      },
+      "phone": "024-648-3804",
+      "website": "ambrose.net",
+      "company": {
+        "name": "Hoeger LLC",
+        "catchPhrase": "Centralized empowering task-force",
+        "bs": "target end-to-end models"
+      }
+    }
+  ],
+  "material": [
+    {
+      "code": "",
+      "serial": "BBGF00843",
+      "model": "Canon imagePROGRAF TX-3200",
+      "room": "FB020"
+    },
+    {
+      "code": "00000109",
+      "serial": "E000111208005",
+      "model": "Horoquartz LB5 RESEAU",
+      "room": "FB010"
+    },
+    {
+      "code": "00001294",
+      "serial": "3CQ049BL9R",
+      "model": "ECRAN LCD 19\"",
+      "room": "FB024"
+    }
+  ],
+  "devices": [
+    {
+      "Code-Barres": "00519084",
+      "N° de Série": "SVK4L33J270",
+      "Modèle": "Mac Mini M4, 16Go, 256Go",
+      "Type": "PC",
+      "Fabricant": "Apple",
+      "Salle": "FB024",
+      "Emplacement": "Armoire Tablettes / Laptops",
+      "Logement": "",
+      "Alias": "",
+      "Lot": "Ferme Devices",
+      "Affectation": "Ferme devices",
+      "Réservable": "FALSE",
+      "Nom d'Hôte": "",
+      "OS": "",
+      "Version": "",
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+    {
+      "Code-Barres": "00096276",
+      "N° de Série": "G500001157",
+      "Modèle": "Poste Client CRLS PT150 recyclage de monnaie + CB",
+      "Type": "Caisse",
+      "Fabricant": "",
+      "Salle": "FB028",
+      "Emplacement": "Caisse",
+      "Logement": "29620SCO102",
+      "Alias": "29620SCO102",
+      "Lot": "29620SCO102",
+      "Affectation": "",
+      "Réservable": "TRUE",
+      "Nom d'Hôte": "29620SCO102",
+      "OS": "",
+      "Version": "",
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": 29620
+    },
+
+    {
+      "Code-Barres": "00049285",
+      "N° de Série": "2121501212JJFA000003",
+      "Modèle": "Chassis U STORE BOX",
+      "Type": "Chassis",
+      "Fabricant": "Huawei",
+      "Salle": "FB020",
+      "Emplacement": "",
+      "Logement": "",
+      "Alias": "USB26545 v1",
+      "Lot": "USBV1 26545",
+      "Affectation": "",
+      "Réservable": "FALSE",
+      "Nom d'Hôte": "USB26545",
+      "OS": "",
+      "Version": "",
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00158028",
+      "N° de Série": "00000000f8969758",
+      "Modèle": "Nano ordinateur Raspberry Pi 3",
+      "Type": "Nano-ordinateur",
+      "Fabricant": "",
+      "Salle": "FB016",
+      "Emplacement": "Armoire PDA",
+      "Logement": "",
+      "Alias": "",
+      "Lot": "",
+      "Affectation": "",
+      "Réservable": "FALSE",
+      "Nom d'Hôte": "",
+      "OS": "",
+      "Version": "",
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00504127",
+      "N° de Série": 23344524700614,
+      "Modèle": "TC22",
+      "Type": "PDA",
+      "Fabricant": "Zebra",
+      "Salle": "FB026",
+      "Emplacement": "Établi",
+      "Logement": "B1",
+      "Alias": "29620MOBXXX_00504127",
+      "Lot": "29620POS028",
+      "Affectation": "",
+      "Réservable": "FALSE",
+      "Nom d'Hôte": "29620MOBXXX_00504127",
+      "OS": "Android",
+      "Version": 13,
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00504325",
+      "N° de Série": 354945974952390,
+      "Modèle": "Galaxy A52s",
+      "Type": "Smartphone",
+      "Fabricant": "Samsung",
+      "Salle": "FB016",
+      "Emplacement": "Armoire PDA",
+      "Logement": 9,
+      "Alias": "Galaxy A52s",
+      "Lot": "Ferme Devices",
+      "Affectation": "Ferme Devices",
+      "Réservable": "FALSE",
+      "Nom d'Hôte": "Galaxy A52s",
+      "OS": "Android",
+      "Version": 13,
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00504023",
+      "N° de Série": "FFXGF2QP0F0N",
+      "Modèle": "iPhone 12",
+      "Type": "Smartphone",
+      "Fabricant": "Apple",
+      "Salle": "FB016",
+      "Emplacement": "Armoire Mobiles",
+      "Logement": 12,
+      "Alias": "iPhone 12",
+      "Lot": "",
+      "Affectation": "",
+      "Réservable": "TRUE",
+      "Nom d'Hôte": "iPhone 12",
+      "OS": "iOS",
+      "Version": 16.7,
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00022969",
+      "N° de Série": "R52RA0DS0PL",
+      "Modèle": "Galaxy Tab Active Pro - 10''",
+      "Type": "Tablette",
+      "Fabricant": "Samsung",
+      "Salle": "FB024",
+      "Emplacement": "Armoire Tablettes / Laptops",
+      "Logement": "A",
+      "Alias": "Galaxy Tab Active Pro",
+      "Lot": "",
+      "Affectation": "",
+      "Réservable": "TRUE",
+      "Nom d'Hôte": "Galaxy Tab Active Pro",
+      "OS": "Android",
+      "Version": 11,
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    },
+
+    {
+      "Code-Barres": "00504057",
+      "N° de Série": "XN2YJJ4PFX",
+      "Modèle": "iPad 10.2",
+      "Type": "Tablette",
+      "Fabricant": "Apple",
+      "Salle": "FB024",
+      "Emplacement": "Armoire Tablettes / Laptops",
+      "Logement": "J",
+      "Alias": "iPad 10",
+      "Lot": "",
+      "Affectation": "",
+      "Réservable": "TRUE",
+      "Nom d'Hôte": "iPad 10",
+      "OS": "iOS",
+      "Version": 17.3,
+      "Domaine": "",
+      "Environnement": "",
+      "CCU": ""
+    }
+  ]
+}

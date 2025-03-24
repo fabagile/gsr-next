@@ -18,8 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Gestion de la salle de recette",
-  description:
-    "Gestion matérielle et logicielle des équipements de la salle de recette",
+  description: "Gestion matérielle et logicielle des équipements de la salle de recette",
 };
 
 export default function RootLayout({
@@ -27,17 +26,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="fr">
+  return (<>
+    {/* <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div id="app">
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </div>
-      </body>
-    </html>
+        > */}
+        <Header />
+        <main className="my-8 flex-1">{children}</main>
+        <Footer />
+      {/* </body>
+    </html> */}
+    </>
   );
 }
