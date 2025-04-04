@@ -1,6 +1,6 @@
 export interface MaterialType {
-    code: string;
-    serial: string;
-    model: string;
-    room: string;
-  }
+  code: string
+  serial: string
+  model: string
+  room: string
+}

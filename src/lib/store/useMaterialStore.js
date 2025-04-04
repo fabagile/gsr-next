@@ -8,18 +8,18 @@ import materialData from '../data/material'
 //     update: (data: void) => void
 // }
 
-const useMaterialStore = create( (get, set) => ({
-    all: [...materialData],
-    items: [...materialData],
-    update: (data) => set({
-        items: [...data]
-    }),
-    delete: (id)=> set(state=>({
-        items: get(state.items).filter(item=> item.id!=id)
-    })),
-    add: item=> set(state=> ({
-        items: [item, get(state.items)]
-    }))
+const useMaterialStore = create((get, set) => ({
+  all: [...materialData],
+  items: [...materialData],
+  update: (data) => set({
+    items: [...data]
+  }),
+  delete: (id) => set(state => ({
+    items: get(state.items).filter(item => item.id !== id)
+  })),
+  add: item => set(state => ({
+    items: [item, get(state.items)]
+  }))
 
-}));
+}))
 export default useMaterialStore

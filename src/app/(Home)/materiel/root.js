@@ -1,1 +1,1 @@
-export const rootName = "/materiel"
+export const rootName = '/materiel'

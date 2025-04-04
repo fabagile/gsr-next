@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-const Devices = () => {
-  return <div></div>;
-};
+const Devices = (): React.JSX.Element => {
+  return <div />
+}
 
-export default Devices;
+export default Devices
